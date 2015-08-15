@@ -222,25 +222,27 @@ angular.module('myApp.services', [])
  */
 
 .service('ServerConfig', function($location) {
+	// var project = $location.absUrl().split('/')[3],
+	// 	project = project.search("#") > 0 ? project : '';
+	// return JSON.parse(angular.toJson({
+	// 	site: {
+	// 		protocal: $location.protocol(),
+	// 		server: $location.host(),
+	// 		project: project,
+	// 		port: $location.port(),
+	// 		endpoint: $location.protocol()
+	// 			+ '://' + $location.host()
+	// 			+ ($location.port() == '80' || $location.port() == '443' ? '' : $location.port())
+	// 			+ (project == '' ? '' : '/' + project) + '/#',
+	// 		draggable: true,
+	// 		sort: 'nmst',
+	// 		orders: '1010',
+	// 	}
+	// }));
 
-    var serverConfig = this;
-
-    var project = $location.absUrl().split('/')[3],
-        project = project.search("#") > 0 ? project : '';
-
-    serverConfig.protocal = $location.protocol();
-    serverConfig.project = project;
-    serverConfig.host = $location.host();
-    serverConfig.port = $location.port();
-    serverConfig.endpoint =
-        serverConfig.protocal + '://' + serverConfig.host + (serverConfig.port == '80' || serverConfig.port == '443' ? '' : serverConfig.port) + (serverConfig.project == '' ? '' : '/' + serverConfig.project) + '/';
-    //"http://acer.iangel.tw/";
-
-    //分頁設定
-    serverConfig.itemPerPage = 5;
-    serverConfig.limitMaxPageSize = 5;
-
-    return serverConfig;
+	var serverConfig = this;
+	serverConfig.endpoint = "http://10.10.11.130:1880/editor/";
+	return serverConfig;
 })
 
 .factory('ServerConfigFile', function($resource) {

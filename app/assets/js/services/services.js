@@ -222,27 +222,28 @@ angular.module('myApp.services', [])
  */
 
 .service('ServerConfig', function($location) {
-	var project = $location.absUrl().split('/')[3],
-		project = project.search("#") > 0 ? project : '';
-	return JSON.parse(angular.toJson({
-		site: {
-			protocal: $location.protocol(),
-			server: $location.host(),
-			project: project,
-			port: $location.port(),
-			endpoint: $location.protocol()
-				+ '://' + $location.host()
-				+ ($location.port() == '80' || $location.port() == '443' ? '' : $location.port())
-				+ (project == '' ? '' : '/' + project) + '/#',
-			draggable: true,
-			sort: 'nmst',
-			orders: '1010',
-		}
-	}));
 
-	// var serverConfig = this;
-	// serverConfig.endpoint = "http://10.10.11.130:1880/editor/";
-	// return serverConfig;
+	// var project = $location.absUrl().split('/')[3],
+	// 	project = project.search("#") > 0 ? project : '';
+	// return JSON.parse(angular.toJson({
+	// 	site: {
+	// 		protocal: $location.protocol(),
+	// 		server: $location.host(),
+	// 		project: project,
+	// 		port: $location.port(),
+	// 		endpoint: $location.protocol()
+	// 			+ '://' + $location.host()
+	// 			+ ($location.port() == '80' || $location.port() == '443' ? '' : $location.port())
+	// 			+ (project == '' ? '' : '/' + project) + '/#',
+	// 		draggable: true,
+	// 		sort: 'nmst',
+	// 		orders: '1010',
+	// 	}
+	// }));
+
+	var serverConfig = this;
+	serverConfig.endpoint = "http://10.10.11.130:1880/editor/";
+	return serverConfig;
 })
 
 .factory('ServerConfigFile', function($resource) {

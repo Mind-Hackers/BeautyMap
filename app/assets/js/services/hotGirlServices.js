@@ -12,8 +12,8 @@ angular.module('myApp.services')
             return {
 
                 getList : function(success,error) {
-                    var apiEndpoint = ServerConfig.endpoint + 'api/hotgirl/list';
-                    // var apiEndpoint = 'http://10.10.11.130:1880/editor/api/hotgirl/list';
+                    // var apiEndpoint = ServerConfig.endpoint + 'api/hotgirl/list';
+                    var apiEndpoint = 'http://beautymap.bigd.tw/app/libs/angularjs-google-maps/testapp/scripts/starbucks.json';
 
                     return $http({
                         url: apiEndpoint,
@@ -24,7 +24,7 @@ angular.module('myApp.services')
 
                         logger.debug('suc response of getList');
 
-                        logger.debug(data);
+                        // logger.debug(data);
 
                         success(data, status, headers, config);
 

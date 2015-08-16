@@ -5,6 +5,7 @@ head.load(
     'libs/font-awesome/css/font-awesome.min.css',
     'libs/angular-block-ui/angular-block-ui.min.css',
 	'assets/css/animation.min.css', //animation css style
+	'assets/css/ng-style.css', //app
     'assets/css/app.css', //app
     'assets/css/sidebar.css', //app sidebar
 
@@ -22,6 +23,8 @@ head.load(
 	'libs/angular-logging/src/angular-logging.js',
 	//google map
 	'libs/angularjs-google-maps/build/scripts/ng-map.min.js',
+	'libs/angularjs-google-maps/testapp/scripts/markers.js',
+	'libs/angularjs-google-maps/testapp/scripts/markerclusterer.js',
 	//side menu
 	'libs/eeh-navigation/dist/eeh-navigation.js',
 	'libs/eeh-navigation/dist/eeh-navigation.tpl.js',
@@ -42,6 +45,8 @@ head.load(
 	//
 	'assets/js/directives/directives.js',
 	'assets/js/directives/sidebarDirective.js',
+	'assets/js/directives/storeInfoDirective.js',
+
 
 	'assets/js/controllers/controllers.js',
 	'assets/js/controllers/loginCtrl.js',
@@ -50,7 +55,6 @@ head.load(
 
 	'assets/js/services/authServices.js',//authentication
 	'assets/js/services/hotGirlServices.js',//authentication
-
 
 
 	function() {

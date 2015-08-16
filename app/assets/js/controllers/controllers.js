@@ -16,8 +16,6 @@ angular.module('myApp.controllers').controller('IndexCtrl', ['$rootScope', '$sco
 
         var logger = avLog.getLogger('IndexCtrl');
 
-        $scope.sidebarStatus = false;
-          logger.info('load sidebar page: ' + $scope.sidebarStatus);
 
         $scope.$on('updateSidebarStatus', function(event, data) {
 

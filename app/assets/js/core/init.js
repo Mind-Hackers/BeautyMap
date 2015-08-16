@@ -6,6 +6,7 @@ head.load(
     'libs/angular-block-ui/angular-block-ui.min.css',
 	'assets/css/animation.min.css', //animation css style
     'assets/css/app.css', //app
+    'assets/css/sidebar.css', //app sidebar
 
 	'libs/angular/angular.min.js',
 	'libs/angular-loader/angular-loader.min.js',
@@ -22,8 +23,8 @@ head.load(
 	//google map
 	'libs/angularjs-google-maps/build/scripts/ng-map.min.js',
 	//side menu
-	// 'libs/eeh-navigation/dist/eeh-navigation.js',
-	// 'libs/eeh-navigation/dist/eeh-navigation.tpl.js',
+	'libs/eeh-navigation/dist/eeh-navigation.js',
+	'libs/eeh-navigation/dist/eeh-navigation.tpl.js',
 
 	'assets/js/core/struct.js',
 
@@ -35,7 +36,12 @@ head.load(
 	'assets/js/services/services.js',
 	'assets/js/services/helper.js',//Optional by festurm
 	'assets/js/filters/filters.js',
+
+	//
+	// directive module
+	//
 	'assets/js/directives/directives.js',
+	'assets/js/directives/sidebarDirective.js',
 
 	'assets/js/controllers/controllers.js',
 	'assets/js/controllers/loginCtrl.js',

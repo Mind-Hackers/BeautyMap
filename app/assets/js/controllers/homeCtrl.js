@@ -1,10 +1,10 @@
 
-angular.module('myApp.controllers').controller('HomeCtrl', ['$scope', 'avLog', 'HotGirlService', 'blockUI',
-  function($scope, avLog, HotGirlService,blockUI) {
+angular.module('myApp.controllers').controller('HomeCtrl', ['$rootScope', '$scope', 'avLog', 'HotGirlService', 'blockUI',
+  function($rootScope, $scope, avLog, HotGirlService,blockUI) {
 
 
     var logger = avLog.getLogger('HomeCtrl');
-    logger.info('load HomeCtrl.js');
+
 
     $scope.getList = function(){
     	HotGirlService.getList(

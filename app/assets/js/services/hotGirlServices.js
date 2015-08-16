@@ -12,8 +12,8 @@ angular.module('myApp.services')
             return {
 
                 getList : function(success,error) {
-                    // var apiEndpoint = ServerConfig.endpoint + 'api/hotgirl/list';
-                    var apiEndpoint = 'http://10.10.11.130:1880/editor/api/hotgirl/list';
+                    var apiEndpoint = ServerConfig.endpoint + 'api/hotgirl/list';
+                    // var apiEndpoint = 'http://10.10.11.130:1880/editor/api/hotgirl/list';
 
                     return $http({
                         url: apiEndpoint,

@@ -14,7 +14,7 @@ deps = [
 	'avaughan.logging',
 	'blockUI',
 
-	// 'eehNavigation',
+	'eehNavigation',
 
 	//i18n support
 	'pascalprecht.translate',//註解掉會爆
@@ -130,12 +130,17 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$httpP
 				// the main template will be placed here (relatively named)
 				// replace unnamed view '<div ui-view></div>'  in this state's parent state, 'home'.
 				'': {
-					templateUrl: 'partials/global.index.html'
+					templateUrl: 'partials/global.index.html',
+					controller: 'IndexCtrl'
 				},
 
 				//viewname@statusname
 
 				// the child views will be defined here (absolutely named)
+				'sidebar@public.home': {
+					templateUrl: 'partials/global.sidebar.html',
+					controller: 'SidebarCtrl'
+				},
 
 				'header@public.home': {
 					templateUrl: 'partials/global.header.html',
